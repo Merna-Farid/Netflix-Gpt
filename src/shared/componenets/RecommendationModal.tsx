@@ -5,7 +5,7 @@ import {
     DialogHeader,
     DialogContent,
     DialogDescription,
-} from "../ui/dialog";
+} from "../ui/Dialog";
 import { Sparkles, Copy, Check, Star, Clock, Film } from "lucide-react";
 import { useState } from "react";
 import { IMovieRecommendation } from "@/types/recommendation.types";
