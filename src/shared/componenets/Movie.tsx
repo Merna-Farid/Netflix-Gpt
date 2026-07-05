@@ -233,7 +233,7 @@ export default function Movie({ movie, onClick }: MovieProps) {
   const [info, setInfo] = useState(false);
   const [touchActive, setTouchActive] = useState(false); // mobile tap-to-reveal state
 
-  const hoverTimeout = useRef<NodeJS.Timeout>();
+const hoverTimeout = useRef<NodeJS.Timeout | undefined>(undefined);git add .
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { user, favourites, updateUser, updateFavourites } = useUser();
