@@ -98,17 +98,17 @@ const NetflixGptModal = ({
     return (
         <>
             <Dialog open={isNetflixGptOpen} onOpenChange={setNetflixGptOpen}>
-                <DialogContent
-                    className="
-               bg-[#1a1a1a] max-w-2xl! w-full gap-10
-               overflow-y-auto text-white border-[#333333]"
-                >
+               <DialogContent
+    className="
+       bg-[#1a1a1a] sm:max-w-2xl gap-6 sm:gap-10
+       overflow-y-auto max-h-[90vh] text-white border-[#333333] px-5 sm:px-8 py-6 sm:py-8"
+>
                     <DialogHeader>
-                        <DialogTitle className="mb-2 flex gap-2 items-center text-2xl font-bold">
-                            <Film className="w-6 h-6 text-[#ff0000]" />
+                        <DialogTitle className="mb-2 flex gap-2 items-center text-lg sm:text-2xl font-bold">
+                            <Film className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff0000] shrink-0" />
                             Find your perfect Movie
                         </DialogTitle>
-                        <DialogDescription className="text-[#999999]">
+                        <DialogDescription className="text-xs sm:text-sm text-[#999999]">
                             Adjust your prefrences
                         </DialogDescription>
                     </DialogHeader>
@@ -146,7 +146,7 @@ const NetflixGptModal = ({
                             />
                         </div>
 
-                        <div className="flex flex-col gap-4 mt-3">
+                        <div className="flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-3">
                             <label className="text-sm font-semibold text-[#f2f2f2]">
                                 Select mood
                             </label>
@@ -159,7 +159,7 @@ const NetflixGptModal = ({
                                             variant="outline"
                                             onClick={() => toggleMood(mood)}
                                             className={cn(
-                                                "cursor-pointer select-none rounded-full px-4 py-1.5 text-sm font-medium",
+                                                "cursor-pointer select-none rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium",
                                                 "border transition-all duration-200 ease-out",
                                                 "hover:scale-105 active:scale-95",
                                                 isSelected
@@ -174,7 +174,7 @@ const NetflixGptModal = ({
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-4 mt-3">
+                        <div className="flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-3">
                             <label className="text-sm font-semibold text-[#f2f2f2]">
                                 Select genre
                             </label>
@@ -187,7 +187,7 @@ const NetflixGptModal = ({
                                             variant="outline"
                                             onClick={() => toggleGenre(genre)}
                                             className={cn(
-                                                "cursor-pointer select-none rounded-full px-4 py-1.5 text-sm font-medium",
+                                                "cursor-pointer select-none rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium",
                                                 "border transition-all duration-200 ease-out",
                                                 "hover:scale-105 active:scale-95",
                                                 isSelected
@@ -209,16 +209,16 @@ const NetflixGptModal = ({
                         )}
                     </div>
 
-                    <DialogFooter className="flex gap-6 mt-6 bg-[#1a1a1a]">
+                    <DialogFooter className="flex flex-col-reverse sm:flex-row gap-3 sm:gap-6 mt-4 sm:mt-6 bg-[#1a1a1a] pb-2 sm:pb-0">
                         <button
-                            className="cursor-pointer glow-red bg-[#141414] font-medium text-sm py-2 px-4 border border-[#262626] rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="cursor-pointer glow-red bg-[#141414] font-medium text-sm py-2.5 sm:py-2 px-4 border border-[#262626] rounded-md disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
                             onClick={handleCancel}
                             disabled={isLoading}
                         >
                             Cancel
                         </button>
                         <button
-                            className="cursor-pointer glow-red bg-[#ff0000] font-medium text-sm py-2 px-4 rounded-[10px] flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="cursor-pointer glow-red bg-[#ff0000] font-medium text-sm py-2.5 sm:py-2 px-4 rounded-[10px] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
                             onClick={handleRecommendedMovie}
                             disabled={isLoading}
                         >
