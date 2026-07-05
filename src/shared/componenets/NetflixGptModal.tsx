@@ -5,11 +5,11 @@ import {
     DialogContent,
     DialogDescription,
     DialogFooter,
-} from "../ui/dialog";
+} from "../ui/Dialog";
 import RecommendationModal from "./RecommendationModal";
 import { Film, Loader2 } from "lucide-react";
 import { Slider } from "../ui/Slider";
-import { Badge } from "../ui/badge";
+import { Badge } from "../ui/Badge";
 import { useEffect, useState } from "react";
 import { GENRES, MOODS } from "@/constants";
 import { cn } from "@/lib/utils";
